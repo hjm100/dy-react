@@ -1,0 +1,117 @@
+/* 清除margin */
+html,
+body,
+p,
+ol,
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+* {
+  /* 移动端按压效果取消 */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 高度继承 */
+html,
+body,
+#root{
+  width: 100%;
+  height: 100%;
+}
+#root{
+  overflow-x: hidden;
+}
+body {
+  /* ios上的滑动卡顿 */
+  -webkit-overflow-scrolling: touch;
+  /* 防止长按选中 */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding-left: 0;
+}
+
+button {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+body,
+div,
+p,
+ul,
+li,
+button,
+textarea {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+a,
+button,
+input,
+textarea {
+  outline: none;
+}
+
+input,
+textarea {
+  border: none;
+}
+
+a:hover {
+  outline: 0;
+}
+
+/* 清除浮动 */
+
+.cf:before,
+.cf:after {
+  content: "";
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}
+
+/* 去除滚动条 */
+
+::-webkit-scrollbar {
+  display: none;
+}

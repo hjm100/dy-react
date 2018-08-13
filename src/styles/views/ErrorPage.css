@@ -1,0 +1,52 @@
+
+/* 错误页面样式 */
+
+#Error{
+    width: 100%;
+}
+
+.Error-box{
+    width: 95%;
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 5px;
+    border:1px solid #fcc600;
+    line-height: 30px;
+
+}
+/* 倒计时样式 */
+
+.Error-time{
+    font-size: 15px;
+    font-weight: 600;
+}
+.Error-title{
+    font-size: 20px;
+    font-weight: 600;
+    color: #f00;
+}
+.Error-dec{
+    font-size: 16px;
+    line-height: 30px;
+    color: #888;
+}
+
+.Error-btnbox{
+    margin-top:10px;
+}
+.Error-btnbox .Error-btn:nth-child(1){
+    background-color: #fcc600;
+    color: #fff;
+}
+.Error-btnbox .Error-btn{
+    margin-right: 10px;
+    font-size: 15px;
+
+}
+
+.Error-copy{
+    padding:5px 30px;
+    font-size: 16px;
+    background-color: #fcc600;
+    border-radius: 5px;
+}

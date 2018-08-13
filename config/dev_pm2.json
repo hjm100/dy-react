@@ -1,0 +1,28 @@
+{
+  "apps": [{
+      "name": "mock",
+      "script": "mock/mock-server.js",
+      "instances": 1,
+      "log_date_format": "YYYY-MM-DD HH:mm Z",
+      "max_memory_restart": "500M",
+      "exec_mode": "fork",
+      "watch": [
+        "mock"
+      ],
+      "env": {
+        "NODE_ENV": "production"
+      }
+    },
+    {
+      "name": "start",
+      "script": "build/scripts/start.js",
+      "instances": 1,
+      "log_date_format": "YYYY-MM-DD HH:mm Z",
+      "max_memory_restart": "500M",
+      "exec_mode": "fork",
+      "env": {
+        "NODE_ENV": "production"
+      }
+    }
+  ]
+}

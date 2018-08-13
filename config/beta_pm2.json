@@ -1,0 +1,17 @@
+{
+    "apps": [{
+        "name": "beta",
+        "script": "build/scripts/beta.js",
+        "instances": 1,
+        "log_date_format": "YYYY-MM-DD HH:mm Z",
+        "max_memory_restart": "500M",
+        "exec_mode": "fork",
+        "watch": [
+          "dist"
+        ],
+        "env": {
+          "NODE_ENV": "production"
+        }
+      }
+    ]
+  }

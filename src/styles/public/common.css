@@ -1,0 +1,28 @@
+
+/* flex布局绝对居中 */
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 水平居中 */
+
+.flex-justify {
+    display: flex;
+    justify-content: center;
+}
+
+/* 垂直居中 */
+
+.flex-align {
+    display: flex;
+    align-items: center;
+}
+
+/* a标签的颜色继承父元素 */
+
+a {
+    color: inherit;
+}

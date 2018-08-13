@@ -1,0 +1,17 @@
+const Koa = require('koa');
+const mock = require('./mock');
+const bodyParser = require('koa-bodyparser');
+const app = new Koa();
+
+
+app.use(bodyParser())
+
+app.use(mock.routes())
+
+// error-handling
+app.on('error', (err, ctx) => {
+    console.error('server error', err, ctx)
+});
+
+app.listen(6666);
+console.log('app started at port 3100')
