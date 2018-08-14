@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom';
 import hjm100 from '../assets/hjm100.png'
 import hjm from '../assets/hjm.png'
 // 使用外部css文件表
@@ -22,7 +23,7 @@ class Home extends Component {
   render() {
     return (
       <div id="Home">
-        <a className="go_location" href="/set/edit/address">前往定位</a>
+        <Link className="go_location" to="/set/edit/address">前往定位</Link>
         <header className="Home-header">
           <div className="home-img flex-center">
             <ImgShear defImg={hjm} imgWidth={200} imgHeight={200} getImgUrl={this.getImgUrl.bind(this)}/>

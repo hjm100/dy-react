@@ -8,7 +8,7 @@ import EditAddress from '../views/user/edit/Address'
 
 // 路由配置
 const USER_ROUTER = [
-    {path: "/set/edit/address", exact: true, text: "404", component: EditAddress},
+    {path: "/set/edit/address", exact: true, text: "定位", component: EditAddress},
 ];
 
 export default USER_ROUTER;
