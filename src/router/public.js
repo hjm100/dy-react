@@ -1,9 +1,12 @@
+/**
+ * 公共模块文件
+ * User: hjm100
+ * Date: 18-08-14 10:10
+ */
 
-import EditAddress from '../views/set/EditAddress'
+ // 路由配置
+const USER_ROUTER = [
 
-// 路由配置
-const PUBLIC_ROUTER = [
-    {path: "/set/edit/address", exact: true, text: "404", component: EditAddress},
 ];
 
-export default PUBLIC_ROUTER;
+export default USER_ROUTER;

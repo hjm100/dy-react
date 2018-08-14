@@ -100,8 +100,8 @@ for (let key in reqAndUrl) { // 方法挂载
         };
       }
       return axios[method](hostname + key + "/" + reqURL, queryData, config) // 发送axios请求
-        .then(res => { // 抛出数据                                           
-          return res.data;
+        .then(res => { // 抛出数据 
+          if(res) return res.data;
         })
         .catch(data => { // 如果错误码0则抛出错误信息
           errorCatch(data.code, data.msg); // 执行错误方法

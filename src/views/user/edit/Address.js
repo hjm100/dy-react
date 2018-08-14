@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import GetLocation from '../../components/GetLocation'
+import GetLocation from '../../../components/GetLocation'
 // 使用外部css文件表
-import '../../styles/views/set.scss'
+import '../../../styles/views/user/edit.scss'
 class EditAddress extends Component {
   constructor (props) {
     super(props);

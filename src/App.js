@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import {Route} from 'react-router-dom'
 import { renderRoutes } from 'react-router-config'
 import routes from './router/router.config'
-import './styles/App.css';
 class App extends Component {
   constructor(props){
     super(props);

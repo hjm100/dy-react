@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import '../styles/components/Qrcode.scss';
+import '../styles/components/Qrcode.css';
 const QRCode = require("qrcode");
 /** 生成二维码开放接口:
  *  二维码内容[通常为url]
