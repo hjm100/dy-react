@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router,Route } from 'react-router-dom'
-import { Provider,connect } from 'react-redux'
 import Layout from './components/Layout'
 class App extends Component {
   constructor(props){
@@ -8,20 +7,13 @@ class App extends Component {
     this.state = {};
   }
   render() {
-    const { store } = this.props
     return (
       <Router>
-        <Provider store={store}>
-          <Route path="/" component={Layout}></Route>
-        </Provider>
+        <Route path="/" component={Layout}></Route>
       </Router>
     );
   }
 }
 
-function mapStateToProps(state){
-  return {routecss:state.routecss}
-}
-
-export default connect(mapStateToProps)(App)
+export default App
 
