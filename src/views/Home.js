@@ -18,7 +18,12 @@ class Home extends Component {
     //再此处执行一个修改图片的ajax请求
     console.log(imgurl)
   }
-
+  //通过js跳转路由
+  goAddress=()=>{
+    this.props.history.push({
+      pathname: '/set/edit/address',
+    })
+  }
   // 该方法会创建一个虚拟DOM，用来表示组件的输出。
   render() {
     return (

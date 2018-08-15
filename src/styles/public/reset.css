@@ -36,11 +36,11 @@ table {
 /* 高度继承 */
 html,
 body,
-#root{
+#app{
   width: 100%;
   height: 100%;
 }
-#root{
+#app{
   overflow-x: hidden;
 }
 body {

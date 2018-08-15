@@ -13,16 +13,23 @@ class EditAddress extends Component {
   // 该方法在首次渲染之前调用(数据初始化)
   componentWillMount (){}
   //已经生成对应的dom结构
-  componentDidMount=()=> {}
+  componentDidMount=()=> {
+    this._ismounted = true;
+  }
   //在组件从 DOM 中移除的时候立刻被调用。
-  componentWillUnmount=()=> {}
+  //组件卸载的重要性
+  componentWillUnmount=()=> {
+    this._ismounted = false;
+  }
   getLocationMsg=(locationMsg)=>{
     //如果不为空的话显示提示
     if(Object.keys(locationMsg).length !== 0){
-      this.setState({ 
-        locationMsg:locationMsg,
-        style:{'display': 'block'}
-      })
+      if(this._ismounted){
+        this.setState({ 
+          locationMsg:locationMsg,
+          style:{'display': 'block'}
+        })
+      }
     }
   }
   submitLocation=()=>{

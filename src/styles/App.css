@@ -1,0 +1,52 @@
+/* router-go */
+/* .left-enter {
+    z-index: 10;
+    transform: translate3d(100%,0,0);
+  }
+  .left-enter.left-enter-active{
+    transform: translate3d(0,0,0);
+    transition:1s;
+  }
+  .left-leave {
+    z-index: 0;
+    transform: translate3d(0,0,0);
+  }
+  .left-leave .route-shade{
+    display: block;
+    opacity: .05;
+  }
+  .left-leave.left-leave-active {
+    transform: translate3d(-50%,0,0);
+    transition:1s;
+  }
+  .left-leave.left-leave-active .route-shade{
+    display: block;
+    opacity: .5;
+    transition:1s;
+  } */
+  /*router-back*/
+  /* .right-enter {
+    z-index: 10;
+    transform: translate3d(-100%,0,0);
+  }
+  .right-enter.right-enter-active{
+    transform: translate3d(0,0,0);
+    transition:1s;
+  }
+  .right-leave {
+    z-index: 0;
+    transform: translate3d(0,0,0);
+  }
+  .right-leave .route-shade{
+    display: block;
+    opacity: .05;
+  }
+  .right-leave.right-leave-active {
+    transform: translate3d(50%,0,0);
+    transition:1s;
+  }
+  .right-leave.right-leave-active .route-shade{
+    display: block;
+    opacity: .5;
+    transition:1s;
+  } */

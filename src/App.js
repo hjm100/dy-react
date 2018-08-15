@@ -1,22 +1,27 @@
 import React, { Component } from 'react';
-import { 
-  BrowserRouter as Router,
-  Switch} from 'react-router-dom'
-import { renderRoutes } from 'react-router-config'
-import routes from './router/router.config'
+import { BrowserRouter as Router,Route } from 'react-router-dom'
+import { Provider,connect } from 'react-redux'
+import Layout from './components/Layout'
 class App extends Component {
+  constructor(props){
+    super(props);
+    this.state = {};
+  }
   render() {
+    const { store } = this.props
     return (
-      <Router> 
-        <Switch>
-          {renderRoutes(routes)}
-        </Switch>
-      </Router> 
+      <Router>
+        <Provider store={store}>
+          <Route path="/" component={Layout}></Route>
+        </Provider>
+      </Router>
     );
   }
 }
 
-export default App;
+function mapStateToProps(state){
+  return {routecss:state.routecss}
+}
 
-
+export default connect(mapStateToProps)(App)
 
