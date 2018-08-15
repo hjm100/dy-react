@@ -33,8 +33,8 @@ class Layout extends Component {
                 transitionName={window.store.getState().routecss}
                 component="div"
                 className="root"
-                transitionEnterTimeout={3000}
-                transitionLeaveTimeout={3000}>
+                transitionEnterTimeout={500}
+                transitionLeaveTimeout={500}>
                   <div className="rootLayout" key={location.pathname} name={location.pathname}>
                       {routerELE}
                   </div>
