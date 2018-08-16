@@ -12,6 +12,7 @@ React.http = new ApiService();
 
 //将存储挂载到window下以至于在任何地方都能访问到
 window.store = (() => {
+    //调用变量
     return createStore(
         todoApp
     )

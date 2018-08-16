@@ -9,3 +9,11 @@ export const pageBack = () => {
         type:'right'
     }
 }
+
+export const Setuser = (key,val) => {
+    return {
+        type:"user",
+        key:key,
+        value:val
+    }
+}
