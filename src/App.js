@@ -7,6 +7,8 @@ class App extends Component {
     this.state = {};
   }
   render() {
+    // 在app.js中可以通过这种方法来设置store
+    // console.log(this.props.store.getState())
     return (
       <Router>
         <Route path="/" component={Layout}></Route>

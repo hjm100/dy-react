@@ -26,8 +26,15 @@ class Layout extends Component {
               judge.push(r.path)
               return <Route location={location} key={index} exact={r.exact} path={r.path} component={r.component}/>
             })
+            //根据链接来获取title
+            let key = judge.indexOf(location.pathname)
             //如果路由不存在跳转错误页
-            if(judge.indexOf(location.pathname)===-1) return <Route component={routeConfig.ErrorPage}/> 
+            if(judge.indexOf(location.pathname)===-1){
+              document.title = '404'
+              return <Route component={routeConfig.ErrorPage}/> 
+            }else{
+              document.title = routeConfig.routes[key].title
+            } 
             return (
               <ReactCSSTransitionGroup
                 transitionName={window.store.getState().routecss}
