@@ -13,9 +13,9 @@ class Layout extends Component {
     componentWillReceiveProps(nextProps) {
       //通过监听组件变化来给根目录加样式
       if(nextProps.history.action==="PUSH"){  //进入
-        window.store.dispatch(action.pageGo())
+        React.store.dispatch(action.pageGo())
       }else if(nextProps.history.action === "POP"){ //走出
-        window.store.dispatch(action.pageBack())
+        React.store.dispatch(action.pageBack())
       }
    }
     render() {
@@ -37,7 +37,7 @@ class Layout extends Component {
             } 
             return (
               <ReactCSSTransitionGroup
-                transitionName={window.store.getState().routecss}
+                transitionName={React.store.getState().routecss}
                 component="div"
                 className="root"
                 transitionEnterTimeout={500}

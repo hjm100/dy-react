@@ -34,13 +34,13 @@ class Home extends Component {
   setStoreUser=()=>{
     let nameVal = this.refs.name_input.value
     let phoneVal = this.refs.phone_input.value
-    window.store.dispatch(Setuser('name',nameVal))
-    window.store.dispatch(Setuser('phone',phoneVal))
+    React.store.dispatch(Setuser('name',nameVal))
+    React.store.dispatch(Setuser('phone',phoneVal))
     this.getStoreUser()
   }
   getStoreUser=()=>{
     this.setState({ 
-      user:window.store.getState().user
+      user:React.store.getState().user
     })
   }
   // 该方法会创建一个虚拟DOM，用来表示组件的输出。

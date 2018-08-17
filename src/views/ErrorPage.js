@@ -7,7 +7,7 @@ class ErrorPage extends Component {
     window.location.href = '/';
   }
   render() {
-    let user =  window.store.getState().user
+    let user =  React.store.getState().user
     return (
       <div id="Error">
         <div className="Error-box">

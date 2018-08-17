@@ -10,8 +10,8 @@ import ApiService from "./services/http";
 // 将axios服务挂在到 react下
 React.http = new ApiService();
 
-//将存储挂载到window下以至于在任何地方都能访问到
-window.store = (() => {
+//将存储挂载到React下以至于在任何地方都能访问到
+React.store = (() => {
     //调用变量
     return createStore(
         todoApp
@@ -19,9 +19,9 @@ window.store = (() => {
 })() 
 
 //获取属性
-// window.store.getState().routecss
+// React.store.getState().routecss
 //设置属性
-// window.store.dispatch(action.pageGo())
+// React.store.dispatch(action.pageGo())
 
-ReactDOM.render(<App store={window.store}/>, document.getElementById('app'));
+ReactDOM.render(<App store={React.store}/>, document.getElementById('app'));
 registerServiceWorker();
