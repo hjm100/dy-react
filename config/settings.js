@@ -3,8 +3,8 @@ module.exports = {
   cdnPath: './', //cdn路径(存放静态资源)
   buildPath:'./dist',//打包路径
   qiniu: {  //七牛云配置
-    ACCESS_KEY: 'b2iGX9h5QfTxs3aa1yTyJBCR1FtshUn3gTx9XNqY',
-    SECRET_KEY: 'OdUl8JlK6ZJ4dVGuIVxkhrD5WT7VSJ7nGLOa_jrZ',
+    ACCESS_KEY: '#############',
+    SECRET_KEY: '#############',
     bucket: 'bitmain',
     path: 'visitor-web'
   },
