@@ -47,7 +47,7 @@ class Home extends Component {
   render() {
     return (
       <div id="Home">
-        <Link className="go_location" to="/set/edit/address">前往定位</Link>
+        <Link className="go_btn go_location" to="/set/edit/address">前往定位</Link>
         <header className="Home-header">
           <div className="home-img flex-center">
             <ImgShear defImg={hjm} imgWidth={200} imgHeight={200} getImgUrl={this.getImgUrl.bind(this)}/>
@@ -70,6 +70,7 @@ class Home extends Component {
           </div>
            <p>开发者名字：{this.state.user.name}</p>
            <p>开发者电话：{this.state.user.phone}</p>
+           <Link className="go_btn go_bagWheel" to="/activity/bagWheel">大转盘</Link>
         </div>
       </div>
     );
