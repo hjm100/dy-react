@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { createStore} from 'redux'
 import todoApp from './store/reducers'
+import './utils/rem'                                     // 添加rem布局
 import './styles/public/reset.css';                      // 重置标签样式
 import './styles/public/common.css';                     // 公共样式表
 import App from './App';
