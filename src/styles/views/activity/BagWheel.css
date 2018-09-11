@@ -30,7 +30,7 @@
     background-position: center;
     background-size: cover;
 }
-#BagWheel .wheel_box .wheel-loop{
+/* #BagWheel .wheel_box .wheel-loop{
     position: absolute;
     overflow: hidden;
     width: 6.87rem;
@@ -41,7 +41,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-}
+} */
 #BagWheel .wheel-goods_box,#BagWheel .wheel-btn_box{
     position: absolute;
     overflow: hidden;
@@ -104,3 +104,42 @@
     background-position: center;
     background-size: cover;
 }
+
+/* 转盘周围闪闪的点 */
+
+#BagWheel .wheel_box .wheel-loop{
+    position: absolute;
+    overflow: hidden;
+    width: 6.8rem;
+    height: 6.8rem;
+    top: .17rem;
+    left: .165rem;
+}
+
+#BagWheel .wheel_box .wheel-loop .loop{
+    position:absolute; 
+    width: 6.8rem;
+    height: 6.8rem;
+}
+#BagWheel .wheel_box .wheel-loop .dot1::after{
+    width: .3rem;
+    height: .3rem;
+    background-image: url('../../../assets/activity/BagWheel/dot1.png');
+}
+#BagWheel .wheel_box .wheel-loop .dot2::after{
+    width: .4rem;
+    height: .4rem;
+    background-image: url('../../../assets/activity/BagWheel/dot2.png');
+    margin-top: -.05rem!important;
+}
+#BagWheel .wheel_box .wheel-loop .loop::after{
+    content: "";
+    position:relative; 
+    margin: 0 auto;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transform-origin: 50% 3.4rem;
+}
+
