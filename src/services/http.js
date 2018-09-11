@@ -3,9 +3,10 @@ import qs from "qs";                    // form格式数据转换 【如果你�
 import errorcode from "./errcode.js";   // 错误码
 import {Toast} from 'antd-mobile';      // 引入加载组件
 import user from "./user.js";           // uesr模块下的接口数据结构
+import activity from "./activity.js";           // activity模块下的接口数据结构
 
 const hostname = "/api/";                // api路径
-const reqAndUrl = Object.assign(user);   // 合并数据
+const reqAndUrl = Object.assign(user,activity);   // 合并数据
 class ApiService {
   getSessionData(sessionItem) { // 获取sessionStorage（会话级别的本地保存）
     let sessionValue = sessionStorage.getItem(sessionItem);

@@ -47,4 +47,27 @@ router.post('/api/user/upload',async (ctx, next) => {
     })
 })
 
+
+router.get('/api/activity/bagWheelGoods', async (ctx, next) => {
+    ctx.body = Mock.mock({
+        'wheelGoods|12': [{
+            'id|+1': 0,
+            'name': '鸿基梦',
+        }],
+        code: 0,
+        msg: '请求成功'
+    })
+})
+
+router.get('/api/activity/getPrize', async (ctx, next) => {
+    ctx.body = Mock.mock({
+        'prize': {
+            'id': Math.floor ( Math.random ()*12),
+            'name': '鸿基梦',
+        },
+        code: 0,
+        msg: '请求成功'
+    })
+})
+
 module.exports = router
