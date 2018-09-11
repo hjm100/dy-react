@@ -12,21 +12,48 @@
 
 2. 在使用的页面中需要使用 window.AMap;
 
-## css文件中图片引入不显示
+## react项目中css文件中背景图片不显示
 
-1. 在js中通过require引入图片资源
+### 场景
+
+1. 在react项目中使用js与css单独分开编写页面
+
+2. 在设置背景图片的时候(在css中引入本地图片)发现图片不显示
+
+### 原因
+
+1. 打包后的图片路径不正确(为跟随打包的层级变化)
+
+### 解决方法
+
+1. 使用cdn,引入带有域名可以在网页上访问的图片路径（cdn法）
+
+``` css
+
+    div{
+        background-image: url('../../../assets/activity/BagWheel/title.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+```
+
+2. 在js中使用require 代码如下
 
 ```html
+<!-- 这里用来引入背景图片 -->
 <div style={{backgroundImage:`url(${require('../../assets/activity/BagWheel/background.png')})`}}></div>
+
 ```
-2. 在css中调整背景样式
 
 ```css
+
 div{
-    /* 也可以在此引入图片带有域名的真实路径，静态资源托管cdn */
-    /* background-image:url('https://hjm100.cn/images/g2.jpg'); */
+    /* 这里用来修饰背景 */
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
+
 ```

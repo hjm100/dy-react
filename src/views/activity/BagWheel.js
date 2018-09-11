@@ -14,8 +14,8 @@ class BagWheel extends Component {
   componentWillUnmount=()=> {}
   render() {
     return (
-      <div id="BagWheel" style={{backgroundImage:`url(${require('../../assets/activity/BagWheel/background.png')})`}}>
- 
+      <div id="BagWheel">
+        <div className="title_bar"></div>
       </div>
     );
   }
