@@ -9,6 +9,9 @@
 # production
 /dist
 
+# log
+/runtime
+
 # misc
 .DS_Store
 .env.local

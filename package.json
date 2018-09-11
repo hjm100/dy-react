@@ -62,7 +62,7 @@
   "scripts": {
     "start": "node build/scripts/start.js",
     "mock": "node mock/mock-server.js",
-    "dev": "pm2 startOrRestart config/dev_pm2.json",
+    "dev": "pm2 flush&&pm2 startOrRestart config/dev_pm2.json&&pm2 log",
     "build": "node build/scripts/build.js",
     "test": "node build/scripts/test.js --env=jsdom",
     "beta": "pm2 startOrRestart config/beta_pm2.json"

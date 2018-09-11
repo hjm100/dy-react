@@ -11,3 +11,22 @@
 1. 需要在index.html全局引入高德地图
 
 2. 在使用的页面中需要使用 window.AMap;
+
+## css文件中图片引入不显示
+
+1. 在js中通过require引入图片资源
+
+```html
+<div style={{backgroundImage:`url(${require('../../assets/activity/BagWheel/background.png')})`}}></div>
+```
+2. 在css中调整背景样式
+
+```css
+div{
+    /* 也可以在此引入图片带有域名的真实路径，静态资源托管cdn */
+    /* background-image:url('https://hjm100.cn/images/g2.jpg'); */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+```

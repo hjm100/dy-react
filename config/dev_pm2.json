@@ -16,6 +16,10 @@
     {
       "name": "start",
       "script": "build/scripts/start.js",
+      "log_file":"runtime/logs/all.log",
+      "out_file":"runtime/logs/out.log",
+      "error_file":"runtime/logs/err.log",
+      "pid_file":"runtime/logs/pm2.log",
       "instances": 1,
       "log_date_format": "YYYY-MM-DD HH:mm Z",
       "max_memory_restart": "500M",
