@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 // 使用外部css文件表
 import '../../styles/views/activity/BagWheel.css';
 import {Toast} from 'antd-mobile';      // 引入加载组件
-import { setInterval } from 'timers';
 class BagWheel extends Component {
   constructor (props) {
     super(props);
@@ -47,7 +46,7 @@ class BagWheel extends Component {
   // 获取到奖品后执行动画
   animation = (circle)=>{
     //周围小球交换显示
-    let loopTime = window.setInterval(()=>{
+    let loopTime = setInterval(()=>{
       let loopEle = this.refs.loops.querySelectorAll('.loop');
       for (let i = 0; i < loopEle.length; i++) {
         if(/(dot1)/.test(loopEle[i].className)){
@@ -60,7 +59,7 @@ class BagWheel extends Component {
       }
     },300)
     setTimeout(()=>{
-      window.clearInterval(loopTime)
+      clearInterval(loopTime)
     },6000)
     let wheel_btn = this.refs.wheel_btn,initDeg=0;  
     if(wheel_btn.style.transform)initDeg = wheel_btn.style.transform.replace(/[^0-9]/ig,"")*1
