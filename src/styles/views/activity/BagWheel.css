@@ -25,7 +25,7 @@
 #BagWheel,#BagWheel .title_bar,#BagWheel .wheel_box{
     background-repeat: no-repeat;
     background-position: top;
-    background-size:cover;;
+    background-size: 100%;
 }
 
 /* 周围圆形小灯[根据需求来添加动画] */
