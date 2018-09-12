@@ -30,6 +30,7 @@
     background-position: center;
     background-size: cover;
 }
+/* 周围圆形小灯[根据需求来添加动画] */
 /* #BagWheel .wheel_box .wheel-loop{
     position: absolute;
     overflow: hidden;
@@ -56,6 +57,8 @@
     width: 7.2rem;
     height: 7.2rem;
 }
+
+/* 扇形显示：用于在抽奖结束后的提示效果 */
 #BagWheel .wheel-item .sector{
     position: absolute;
     top: 10%;
@@ -75,6 +78,7 @@
     transform-origin: 0% 100%;
 }
 
+/* 扇形排列奖品展示 */
 #BagWheel .wheel-goods{
     position: relative;
     display: block;
@@ -86,6 +90,7 @@
     transform-origin: 50% 3.6rem;
 }
 
+/* 文字加边框 */
 #BagWheel .wheel-goods .wg-text{
     font-size: .3rem;
     color: #fff;
@@ -107,6 +112,8 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+/* 按钮盒子样式，使用层级来做重叠 */
 #BagWheel .wheel_btn{
     background-image: url('../../../assets/activity/BagWheel/wheel_btn.png');
     z-index: 101;
