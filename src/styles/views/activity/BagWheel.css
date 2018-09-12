@@ -13,12 +13,6 @@
     z-index: 100;
 }
 
-#BagWheel,#BagWheel .title_bar{
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: contain;
-}
-
 #BagWheel .wheel_box{
     width: 7.2rem;
     height: 7.6rem;
@@ -26,10 +20,14 @@
     z-index: 99;
     top: 1.5rem;
     background-image: url('../../../assets/activity/BagWheel/wheel.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
 }
+
+#BagWheel,#BagWheel .title_bar,#BagWheel .wheel_box{
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size:cover;;
+}
+
 /* 周围圆形小灯[根据需求来添加动画] */
 /* #BagWheel .wheel_box .wheel-loop{
     position: absolute;
