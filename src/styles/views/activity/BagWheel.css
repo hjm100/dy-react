@@ -56,6 +56,24 @@
     width: 7.2rem;
     height: 7.2rem;
 }
+#BagWheel .wheel-item .sector{
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    overflow: hidden;
+}
+#BagWheel .wheel-item .sector .sectorCss{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 50%;
+    transform-origin: 0% 100%;
+}
 
 #BagWheel .wheel-goods{
     position: relative;

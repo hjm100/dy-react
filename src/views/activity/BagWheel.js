@@ -28,9 +28,16 @@ class BagWheel extends Component {
       React.http.activity.getPrize().then(res => {
         this.animation(res.prize.id*30);
         //动画结束后提示用户获取的奖励
+        let goalSectorEle = this.refs[`sector${res.prize.id}`]
         setTimeout(() => {
+          // 指定奖品的扇形添加动画
+          goalSectorEle.style.backgroundColor = '#fffdb6'
           Toast.success(`恭喜您获得了${res.prize.id}:${res.prize.name}`);
         }, 6000);
+        //删除样式
+        setTimeout(() => {
+          goalSectorEle.style.backgroundColor = 'inherit'
+        },8000)
       })
     }
     this.timer = setTimeout(() => {
@@ -68,6 +75,9 @@ class BagWheel extends Component {
   wheelItemsEle = (datas)=>{
     return(
       <div className="wheel-item" key={datas.id}>
+        <div className="sector">
+          <div className="sectorCss" ref={`sector${datas.id}`} style={{transform: `rotate(${datas.id*30-15}deg) skewY(-60deg)`}}></div>
+        </div>
         <div className="wheel-goods" style={{transform: `rotate(${datas.id*30}deg)`}}>
           <h3 className="wg-text">{datas.name+datas.id}</h3>
           <div className="wg-icon">
@@ -102,8 +112,8 @@ class BagWheel extends Component {
           {/*转盘物品*/}
           <div className="wheel-goods_box">{this.state.wheelGoods.map(this.wheelItemsEle)}</div>
           {/*转盘按钮*/}
-          <div className="wheel-btn_box flex-center" onClick={this.getPrize}>
-            <div className="btn wheel_btnTop"></div>
+          <div className="wheel-btn_box flex-center">
+            <div className="btn wheel_btnTop" onClick={this.getPrize}></div>
             <div className="btn wheel_btn" ref="wheel_btn"></div>
           </div>
         </div>
