@@ -7,7 +7,7 @@ class BagWheel extends Component {
     super(props);
     this.state = {
       wheelGoods:[], //大转盘物品列表
-      btnEnable:true //反之用户频繁点击
+      btnEnable:true //防止用户频繁点击
     };
   }
   // 该方法在首次渲染之前调用(数据初始化)
