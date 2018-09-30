@@ -17,7 +17,7 @@ class Register extends Component {
   render() {
     return (
       <div id="Register">
-          
+        注册
       </div>
     );
   }
