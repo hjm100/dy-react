@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
-import { } from '../../utils/utils'
 import { InputItem } from 'antd-mobile';
-import phoneAreaCode from "../../config/phoneAreaCode";
+import PhoneAreaCode from '../../components/PhoneAreaCode'
 // 使用外部css文件表
 import '../../styles/views/authority/Login.css'
 class Login extends Component {
   constructor (props) {
     super(props);
     this.state = {
-        checkedCode:'' //选中的地区码
+        checkedCodeData:{
+          name:'中国',
+          code:'+86'
+        } //选中的地区码(默认为中国)
     };
   }
   // 该方法在首次渲染之前调用(数据初始化)
@@ -17,28 +19,24 @@ class Login extends Component {
   componentDidMount=()=> {}
   //在组件从 DOM 中移除的时候立刻被调用。
   componentWillUnmount=()=> {}
-  showOption=()=>{
-    let eleStyle = this.refs.pac_list.style.display === 'none'?'block':'none';
-    this.refs.pac_list.style.display = eleStyle
-  }
-  setPACListEle = (datas)=>{
-      return(
-        <li className="pac_item" key={datas.name}>
-            <span className="pac_item__area">{datas.name}</span>
-            <span className="pac_item__code">{datas.code}</span>
-        </li>
-    )
+  getCodeData=(codeData)=>{
+    this.setState({ 
+      checkedCodeData:codeData
+    })
   }
   render() {
     return (
       <div id="Login">
         <div className="code_box">
-            <div className="pac_input" onClick={this.showOption}>
-                <InputItem className="phone_area_code" disabled extra="中国">国家与地区</InputItem>
-            </div>
-            <ul className="pac_list" ref="pac_list" style={{display: 'none'}}>
-                 {phoneAreaCode.map(this.setPACListEle)}
-            </ul>
+          <PhoneAreaCode getCodeData={this.getCodeData.bind(this)}></PhoneAreaCode>
+          <div className="input_box">
+            <InputItem className="input_self" placeholder="请输入手机号">{this.state.checkedCodeData.code}</InputItem>
+          </div>
+          <div className="input_box">
+            <InputItem className="input_self" placeholder="请输入密码">
+              <div className="lockImg"/>
+            </InputItem>
+          </div>
         </div>
       </div>
     );

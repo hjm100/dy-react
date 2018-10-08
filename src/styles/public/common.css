@@ -26,3 +26,43 @@
 a {
     color: inherit;
 }
+
+/*自定义input样式*/
+
+#app .input_box{
+    margin-bottom: .3rem;
+}
+
+#app .input_self{
+    width: 95%;
+    margin: 0 auto;
+}
+
+#app .input_self {
+    border-radius: .1rem;
+    height: .8rem;
+    min-height: 40px;
+}
+
+#app .input_self .am-list-line {
+    padding-right: 30px;
+    border: none;
+}
+#app .input_self .am-list-line:after{
+    height: 0;
+}
+#app .input_self .am-input-label,
+#app .input_self .am-input-control,
+#app .am-list-item .am-input-control input,
+#app .input_self .am-input-extra,
+#app .pac_item {
+    font-size: 12px;
+}
+#app .input_self .am-input-extra {
+    position: relative;
+    overflow: initial;
+    line-height: .3rem;
+    color: #000;
+    font-weight: 600;
+}
+
