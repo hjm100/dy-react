@@ -33,12 +33,10 @@ a {
     margin-bottom: .3rem;
 }
 
-#app .input_self{
+#app .input_self,
+#app .btn_self {
     width: 95%;
     margin: 0 auto;
-}
-
-#app .input_self {
     border-radius: .1rem;
     height: .8rem;
     min-height: 40px;
@@ -77,4 +75,10 @@ a {
     width: .4rem;
     max-width: 20px;
     max-height: 20px;
+}
+#app .btn_self{
+    line-height: .8rem;
+    font-size: .25rem;
+    color: #fff;
+    background: #f70;
 }

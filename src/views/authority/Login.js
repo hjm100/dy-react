@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { InputItem } from 'antd-mobile';
+import {Link} from 'react-router-dom';
+import { InputItem,Button } from 'antd-mobile';
 import PhoneAreaCode from '../../components/PhoneAreaCode'
 // 使用外部css文件表
 import '../../styles/views/authority/Login.css'
@@ -8,6 +9,7 @@ class Login extends Component {
   constructor (props) {
     super(props);
     this.state = {
+        loginType:0, // 0 手机快捷登录  1 昵称登录
         checkedCodeData:{
           name:'中国',
           code:'+86'
@@ -25,10 +27,15 @@ class Login extends Component {
       checkedCodeData:codeData
     })
   }
+  switchLoginType=(type)=>{
+    this.setState({ 
+      loginType:type
+    })
+  }
   render() {
     return (
       <div id="Login">
-        <div className="code_box">
+        <div className="from_box">
           <PhoneAreaCode getCodeData={this.getCodeData.bind(this)}></PhoneAreaCode>
           <div className="input_box">
             <InputItem className="input_self" placeholder="请输入手机号">{this.state.checkedCodeData.code}</InputItem>
@@ -42,11 +49,20 @@ class Login extends Component {
           <div className="input_box verificaCode">
             <InputItem className="input_self" 
               placeholder="请输入验证码" 
-              extra={<img src={checkCode}/>}>
+              extra={<img src={checkCode} alt="验证码"/>}>
               <div className="checkImg input_icon"/>
             </InputItem>
           </div>
+          <div className="input_box">
+            <Button className="btn_self">立即登录</Button>
+          </div>
         </div>
+        <div className="link_box flex-center">
+          <Link className="link" to="">忘记密码？</Link>
+          <span className="link" style={{color:this.state.loginType===0?'#f70':'#a4a4a4'}} onClick={this.switchLoginType.bind(this,0)}>手机快捷登陆</span>
+          <span className="link" style={{color:this.state.loginType===1?'#f70':'#a4a4a4'}} onClick={this.switchLoginType.bind(this,1)}>昵称登录</span>
+        </div>
+        <Link className="fastReg" to="">快速注册</Link>
       </div>
     );
   }

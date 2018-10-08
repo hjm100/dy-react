@@ -23,3 +23,27 @@
     width: 100%;
     height: 100%;
 }
+
+#Login .link_box{
+    width: 95%;
+    margin: 0 auto;
+    text-align: center;
+    color: #a4a4a4;
+}
+
+#Login .link_box .link:nth-child(1),
+#Login .link_box .link:nth-child(3){
+    flex: .5;
+}
+#Login .link_box .link:nth-child(2){
+    flex: 1;
+}
+#Login .fastReg{
+    position: absolute;
+    bottom: .4rem;
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: #f70;
+    text-decoration: underline;
+}
