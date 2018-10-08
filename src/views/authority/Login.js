@@ -3,6 +3,7 @@ import { InputItem } from 'antd-mobile';
 import PhoneAreaCode from '../../components/PhoneAreaCode'
 // 使用外部css文件表
 import '../../styles/views/authority/Login.css'
+import checkCode from '../../assets/check_code.png'
 class Login extends Component {
   constructor (props) {
     super(props);
@@ -34,7 +35,15 @@ class Login extends Component {
           </div>
           <div className="input_box">
             <InputItem className="input_self" placeholder="请输入密码">
-              <div className="lockImg"/>
+              <div className="lockImg input_icon"/>
+            </InputItem>
+          </div>
+          {/* 此处先用常用验证码方式代替 */}
+          <div className="input_box verificaCode">
+            <InputItem className="input_self" 
+              placeholder="请输入验证码" 
+              extra={<img src={checkCode}/>}>
+              <div className="checkImg input_icon"/>
             </InputItem>
           </div>
         </div>

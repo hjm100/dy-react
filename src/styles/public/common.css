@@ -51,6 +51,9 @@ a {
 #app .input_self .am-list-line:after{
     height: 0;
 }
+#app .input_self .am-input-label{
+    width: 1.5rem;
+}
 #app .input_self .am-input-label,
 #app .input_self .am-input-control,
 #app .am-list-item .am-input-control input,
@@ -66,3 +69,12 @@ a {
     font-weight: 600;
 }
 
+#app .input_icon{
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: .4rem;
+    width: .4rem;
+    max-width: 20px;
+    max-height: 20px;
+}
