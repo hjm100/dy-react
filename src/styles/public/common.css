@@ -84,3 +84,21 @@ a {
     color: #fff;
     background: #f70;
 }
+
+/* 表单图标库 */
+
+#app .lockImg{ /* 锁 */
+    background-image: url('../../assets/lock_icon.png');
+}
+
+#app .checkImg{ /* 图片验证码 */
+    background-image: url('../../assets/check_img_icon.png');
+}
+
+#app .checkPhone{ /* 手机验证码 */
+    background-image: url('../../assets/check_phone_icon.png');
+}
+
+#app .userImg{ /* 用户 */
+    background-image: url('../../assets/user_icon.png');
+}

@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import { InputItem,Button,Toast } from 'antd-mobile';
 import '../styles/components/verificaCode.css';
 import checkCode from '../assets/check_code.png'
+import {isPhone} from '../utils/validate'
 // 实际开发过程中使用此接口
 // const checkCode = '/api/verify/imgCode?type=forget'
 class verificaCode extends Component {
@@ -30,8 +31,7 @@ class verificaCode extends Component {
     }
     getSMSCode = (codePhone,codeTime) =>{
         //判断手机号是否正确
-        let regPhone = /^(0|86|17951)?(13[0-9]|15[012356789]|17[678]|18[0-9]|14[45678]|19[89]|16[6])[0-9]{8}$/;
-        if (!regPhone.test(codePhone)) return Toast.fail('请检查手机号是否正确');
+        if (!isPhone(codePhone)) return Toast.fail('请检查手机号是否正确');
         else{
             //初始化倒计时长
             this.setState({ 
@@ -59,16 +59,20 @@ class verificaCode extends Component {
         this.setState({ sendSuccess:true})
         this.Timer= setInterval(() => {
             if (this.state.time <= 1){
-                this.setState({ sendSuccess:false,time:0 })
+                this.setState({ sendSuccess:false,time:0 });
                 clearInterval(this.Timer);
             }else{
-                this.setState({ time: this.state.time-1 })
+                this.setState({ time: this.state.time-1 });
             } 
         }, 1000);
       }
+      //获取输入验证码信息
+      getInputValue=()=>{
+          return this.refs.codeValue.state.value
+      }
     // 短信验证码方法
     render() {
-        const { className, codeType, codePhone, codeTime} = this.props;
+        const { className, style, codeType, codePhone, codeTime} = this.props;
         const {sendSuccess, time} = this.state;
         let extraEle;
         // 再此处判断与渲染ele结构
@@ -79,12 +83,13 @@ class verificaCode extends Component {
                 {sendSuccess ? time+'s' : '获取验证码'}
             </Button>;
         return (
-            <div id="verificaCode" className={className}>
+            <div id="verificaCode" className={className} style={style}>
                 <div className="input_box verificaCode">
                     <InputItem className="input_self" 
+                        ref="codeValue"
                         placeholder="请输入验证码" 
                         extra={extraEle}>
-                        <div className="checkImg input_icon"/>
+                        <div className={codeType==='IMG' ?'checkImg input_icon':'checkPhone input_icon'}/>
                     </InputItem>
                 </div>
             </div>

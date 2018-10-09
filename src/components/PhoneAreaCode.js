@@ -36,7 +36,7 @@ class PhoneAreaCode extends Component {
       }
     render() {
         return (
-            <div id="PhoneAreaCode" className={this.props.className}>
+            <div id="PhoneAreaCode" style={this.props.style} className={this.props.className}>
                 <div className="input_box" onClick={this.showOption}>
                     <InputItem className="phone_area_code input_self" disabled extra={this.state.checkedCodeData.name}>国家与地区</InputItem>
                     <ul className="pac_list" ref="pac_list" style={{display: 'none'}}>

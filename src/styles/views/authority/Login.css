@@ -2,27 +2,27 @@
     padding: .4rem 0 .2rem;
 }
 
-#Login .lockImg{
-    background-image: url('../../../assets/lock_icon.png');
-}
-
-#Login .checkImg{
-    background-image: url('../../../assets/check_icon.png');
-}
-
 #Login .link_box{
     width: 95%;
     margin: 0 auto;
-    text-align: center;
     color: #a4a4a4;
 }
 
 #Login .link_box .link:nth-child(1),
 #Login .link_box .link:nth-child(3){
     flex: .5;
+    padding: 0 .2rem;
+}
+#Login .link_box .link:nth-child(1){
+    text-align: left;
+}
+#Login .link_box .link:nth-child(3){
+    text-align: right;
 }
 #Login .link_box .link:nth-child(2){
+    text-align: center;
     flex: 1;
+    color: #f70;
 }
 #Login .fastReg{
     position: absolute;
