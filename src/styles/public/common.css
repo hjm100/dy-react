@@ -102,3 +102,57 @@ a {
 #app .userImg{ /* 用户 */
     background-image: url('../../assets/user_icon.png');
 }
+
+
+/* 文本公用样式 */
+
+#app article {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#app article {
+    padding: 20px 15px;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+#app article * {
+    max-width: 100%;
+    box-sizing: border-box;
+    word-wrap: break-word;
+}
+
+#app article h1 {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: .9em;
+    text-align: center;
+}
+
+#app article section {
+    margin-bottom: 1.5em;
+}
+
+#app article h2 {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: .34em;
+}
+
+#app article h3 {
+    font-weight: 400;
+    font-size: 15px;
+    margin-bottom: .34em;
+}
+
+#app article p,
+#app article ul {
+    margin: 0 0 .8em;
+}
+
+#app article li {
+    list-style: none;
+    padding-left: 15px;
+    font-size: 14px;
+}

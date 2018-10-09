@@ -96,7 +96,7 @@ class Login extends Component {
           </div>
         </div>
         <div className="link_box flex-center">
-          <Link className="link" to="">忘记密码？</Link>
+          <Link className="link" to="/authority/findPwd">忘记密码？</Link>
           <span className="link"
             style={{display:this.state.loginType===2?'none':'block'}}
             onClick={this.switchLoginType.bind(this,this.state.loginType===0? 1 : 0)}>
@@ -106,7 +106,7 @@ class Login extends Component {
             {this.state.loginType===2? '手机登录' : '昵称登录'}
           </span>
         </div>
-        <Link className="fastReg" to="">快速注册</Link>
+        <Link className="fastReg" to="/authority/register">快速注册</Link>
       </div>
     );
   }

@@ -1,0 +1,45 @@
+#Register {
+    padding: .4rem 0 .2rem;
+}
+
+#Register .goLogin {
+    display: block;
+    text-align: right;
+    padding: 0 .4rem;
+    text-decoration: underline;
+    font-size: .28rem;
+    font-weight: 700;
+    color: #f70;
+}
+
+#Register .tips_box{
+    position: absolute;
+    position: absolute;
+    bottom: .3rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+}
+
+#Register .tips_box .am-checkbox-inner {
+    width: .3rem;
+    height: .3rem;
+}
+
+#Register .tips_box .am-checkbox.am-checkbox-checked .am-checkbox-inner {
+    border-color: #f70;
+    background: #f70;
+}
+
+#Register .tips_box .am-checkbox-inner:after {
+    right: 4px;
+    height: 8px;
+}
+
+#Register .am-checkbox-agree .am-checkbox-agree-label {
+    margin-left: .4rem;
+    font-size: .25rem;
+}
+#Register .tips_text{
+    color: #f70;
+}
