@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import { InputItem } from 'antd-mobile';
-import phoneAreaCode from "../config/phoneAreaCode";
+import phoneAreaCodeConfig from "../config/phoneAreaCode";
 import '../styles/components/PhoneAreaCode.css';
-class Modalbox extends Component {
+class PhoneAreaCode extends Component {
     constructor(props) {
         super(props);  
         this.state = {
@@ -40,7 +40,7 @@ class Modalbox extends Component {
                 <div className="input_box" onClick={this.showOption}>
                     <InputItem className="phone_area_code input_self" disabled extra={this.state.checkedCodeData.name}>国家与地区</InputItem>
                     <ul className="pac_list" ref="pac_list" style={{display: 'none'}}>
-                        {phoneAreaCode.map(this.setPACListEle)}
+                        {phoneAreaCodeConfig.map(this.setPACListEle)}
                     </ul>
                 </div>
             </div>
@@ -48,4 +48,4 @@ class Modalbox extends Component {
     }
 }
 
-export default Modalbox;
+export default PhoneAreaCode;

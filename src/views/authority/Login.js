@@ -2,14 +2,14 @@ import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import { InputItem,Button } from 'antd-mobile';
 import PhoneAreaCode from '../../components/PhoneAreaCode'
+import VerificaCode from '../../components/VerificaCode'
 // 使用外部css文件表
 import '../../styles/views/authority/Login.css'
-import checkCode from '../../assets/check_code.png'
 class Login extends Component {
   constructor (props) {
     super(props);
     this.state = {
-        loginType:0, // 0 手机快捷登录  1 昵称登录
+        loginType:0, // 0 手机快捷登录 1 手机密码登录  2 昵称登录
         checkedCodeData:{
           name:'中国',
           code:'+86'
@@ -32,6 +32,11 @@ class Login extends Component {
       loginType:type
     })
   }
+  login=()=>{
+    console.log('登录')
+    //登录失败的时候调用获取验证码接口
+    this.refs.verifica_code.getImgCode()
+  }
   render() {
     return (
       <div id="Login">
@@ -46,15 +51,10 @@ class Login extends Component {
             </InputItem>
           </div>
           {/* 此处先用常用验证码方式代替 */}
-          <div className="input_box verificaCode">
-            <InputItem className="input_self" 
-              placeholder="请输入验证码" 
-              extra={<img src={checkCode} alt="验证码"/>}>
-              <div className="checkImg input_icon"/>
-            </InputItem>
-          </div>
+          <VerificaCode codeType="IMG" ref="verifica_code"></VerificaCode>
+          <VerificaCode codeType="SMS" codePhone={18612908099}></VerificaCode>
           <div className="input_box">
-            <Button className="btn_self">立即登录</Button>
+            <Button className="btn_self" onClick={this.login}>立即登录</Button>
           </div>
         </div>
         <div className="link_box flex-center">

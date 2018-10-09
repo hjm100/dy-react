@@ -1,0 +1,27 @@
+#verificaCode .verificaCode .input_self .am-input-extra{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 100%;
+    max-height: none;
+    right: 0;
+}
+
+#verificaCode .verificaCode .input_self .am-input-extra img{
+    width: 100%;
+    height: 100%;
+}
+
+#verificaCode .verificaCode .input_self .btn_extra{
+    width: 90%;
+    height: .6rem;
+    line-height: .6rem;
+    font-size: .25rem;
+    color: #fff;
+    background-color: #f70;
+}
+#verificaCode .verificaCode .input_self .btn_extra::before{
+    border: none;
+}
